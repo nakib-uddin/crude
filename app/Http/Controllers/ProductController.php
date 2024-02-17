@@ -10,6 +10,8 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      */
+  
+      
     public function index()
     {
         $products = Product::all();
@@ -33,10 +35,11 @@ class ProductController extends Controller
             'name' => 'required',
             'qty' => 'required|numeric',
             'price' => 'required|decimal:0,2',
-            'description' => 'nullable'
+            'description' => 'nullable',
+            'role' => 'required', // Add validation for the 'role' field
         ]);
 
-       $newProduct = Product::create($data);
+        $newProduct = Product::create($data);
         return redirect(route('product.index'));
     }
 
@@ -54,7 +57,6 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         return view('products.edit', ['product' => $product]);  
-    
     }
 
     /**
@@ -66,11 +68,12 @@ class ProductController extends Controller
             'name' => 'required',
             'qty' => 'required|numeric',
             'price' => 'required|decimal:0,2',
-            'description' => 'nullable'
+            'description' => 'nullable',
+            'role' => 'required', // Add validation for the 'role' field
         ]);
-     
-       $product->update($data);
-       return redirect(route('product.index'))->with('success','Product Updated successfully');
+
+        $product->update($data);
+        return redirect(route('product.index'))->with('success','Product Updated successfully');
     }
 
     /**
@@ -79,6 +82,6 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         $product->delete();
-    return redirect(route('product.index'))->with('success','Product deleted successfully');
+        return redirect(route('product.index'))->with('success','Product deleted successfully');
     }
 }
