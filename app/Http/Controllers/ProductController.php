@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -14,8 +15,12 @@ class ProductController extends Controller
       
     public function index()
     {
-        $products = Product::all();
-        return view('products.index', ['products' => $products]);
+        if (Auth::check()) {
+            $products = Product::all();
+            return view('products.index', ['products' => $products]);
+        }
+        return redirect("login")->withSuccess('You are not allowed to access');
+       
     }
 
     /**
@@ -23,7 +28,11 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('products.create');
+        if (Auth::check()) {
+            return view('products.create');
+        }
+        return redirect("login")->withSuccess('You are not allowed to access');
+    
     }
 
     /**
@@ -56,7 +65,11 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('products.edit', ['product' => $product]);  
+        if (Auth::check()) {
+            return view('products.edit', ['product' => $product]);  
+        }
+        return redirect("login")->withSuccess('You are not allowed to access');
+
     }
 
     /**

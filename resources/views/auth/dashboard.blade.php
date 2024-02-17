@@ -1,5 +1,4 @@
 @extends('auth.layouts')
-
 @section('content')
 @vite('resources/css/app.css')
 <div class="flex justify-center items-center min-h-screen">

@@ -5,6 +5,8 @@ use App\Http\Controllers\ProductController ;
 use App\Http\Controllers\SupplierController;
 use App\Http\Middleware\DisableAuthCaching;
 use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\CategoryController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -63,7 +65,13 @@ Route::group(['middleware' => ['web', DisableAuthCaching::class]], function () {
             'update' => 'supplier.update',
             'destroy' => 'supplier.destroy',
         ]);
+
+    Route::resource('categories', CategoryController::class)->only([
+            'index', 'create', 'store'
+        ]);
     
 });
+
+
 
 

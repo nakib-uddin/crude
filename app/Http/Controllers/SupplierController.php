@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Supplier;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SupplierController extends Controller
 {
@@ -12,8 +13,12 @@ class SupplierController extends Controller
      */
     public function index()
     {
-        $suppliers = Supplier::all();
-        return view('suppliers.index', ['suppliers' => $suppliers]);
+        if (Auth::check()) {
+            $suppliers = Supplier::all();
+            return view('suppliers.index', ['suppliers' => $suppliers]);
+        }
+        return redirect("login")->withSuccess('You are not allowed to access');
+        
     }
 
     /**
@@ -21,7 +26,13 @@ class SupplierController extends Controller
      */
     public function create()
     {
-        return view('suppliers.create');
+
+        if (Auth::check()) {
+            return view('suppliers.create');
+        }
+        return redirect("login")->withSuccess('You are not allowed to access');
+        
+        
     }
 
     /**
@@ -59,7 +70,12 @@ class SupplierController extends Controller
      */
     public function edit(Supplier $supplier)
     {
-        return view('suppliers.edit', ['supplier' => $supplier]);  
+        if (Auth::check()) {
+            return view('suppliers.edit', ['supplier' => $supplier]);  
+        }
+        return redirect("login")->withSuccess('You are not allowed to access');
+        
+  
     }
 
     /**
