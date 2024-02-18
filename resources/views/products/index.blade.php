@@ -25,9 +25,9 @@
         </div>
 
         <div>
-            <table class="table-auto  border-collapse border border-gray-300">
+            <table class="table-auto border-collapse border border-gray-300">
                 <thead>
-                    <tr class="border-b bg-gray-200">
+                    <tr class="bg-gray-200">
                         <th class="p- ">ID</th>
                         <th class="p-2 ">Name</th>
                         <th class="p-2 ">Qty</th>

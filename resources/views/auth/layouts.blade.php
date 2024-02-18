@@ -28,6 +28,7 @@
                     <a href="{{ route('product.index') }}" class="text-blue-500 hover:text-blue-600 mt-2">Product</a>
                     <a href="{{ route('supplier.index') }}" class="text-blue-500 hover:text-blue-600 mt-2">Supplier</a>
                     <a href="{{ route('categories.index') }}" class="text-blue-500 hover:text-blue-600 mt-2">Category</a>
+                    <a href="{{ route('customer.index') }}" class="text-blue-500 hover:text-blue-600 mt-2">Customer</a>
                     <div class="flex items-center">
                         <!-- Placeholder for profile icon -->
                         <span class="bg-secondary text-white p-2 rounded-full me-2">Profile</span>
