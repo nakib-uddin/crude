@@ -43,10 +43,7 @@
                 <label class="mb-1">Address</label>
                 <input type="text" name="address" placeholder="Address" value="{{ $customer->address }}" class="py-2 px-3 border rounded">
             </div>
-            <div class="flex flex-col">
-                <label class="mb-1">Amount</label>
-                <input type="text" name="amount" placeholder="Amount" value="{{ $customer->amount }}" class="py-2 px-3 border rounded">
-            </div>
+            
             <div class="flex flex-col">
                 <label class="mb-1">Status</label>
                 <input type="text" name="status" placeholder="Status" value="{{ $customer->status }}" class="py-2 px-3 border rounded">

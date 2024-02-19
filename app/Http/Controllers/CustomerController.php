@@ -44,7 +44,6 @@ $data = $request->validate([
     'phone' => 'required',
     'email' => 'required|email',
     'address' => 'required',
-    'amount' => 'required|regex:/^\d+(\.\d{1,2})?$/',
     'status' => 'required',
 ]);
 
@@ -81,7 +80,6 @@ return redirect(route('customer.index'))->with('success', 'Customer created succ
             'phone' => 'required',
             'email' => 'required|email',
             'address' => 'required',
-            'amount' => 'required|numeric',
             'status' => 'required',
         ]);
         

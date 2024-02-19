@@ -44,11 +44,7 @@
                 <input type="text" name="address" id="address" placeholder="Address"
                        class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300">
             </div>
-            <div class="mb-4">
-                <label for="amount" class="block text-sm font-medium text-gray-600">Amount</label>
-                <input type="text" name="amount" id="amount" placeholder="Amount"
-                       class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300">
-            </div>
+            
             <div class="mb-4">
                 <label for="status" class="block text-sm font-medium text-gray-600">Status</label>
                 <select name="status" id="status" class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300">

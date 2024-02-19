@@ -21,7 +21,7 @@
 
         <div class="mb-4">
             <a href="{{ route('customer.create') }}" class="bg-blue-500 text-white py-2 px-4 rounded">Create Customer</a>
-            <a href="{{ route('dashboard') }}" class="bg-blue-500 text-white py-2 px-4 rounded">Dashboard </a>
+            
         </div>
 
         <div>
@@ -33,7 +33,6 @@
                         <th class="p-2 ">Phone</th>
                         <th class="p-2 ">Email</th>
                         <th class="p-2 ">Address</th>
-                        <th class="p-2 ">Amount</th>
                         <th class="p-2 ">Status</th>
                         <th class="p-2">Edit</th>
                        
@@ -47,7 +46,6 @@
                             <td class="p-2 ">{{ $customer->phone }}</td>
                             <td class="p-2 ">{{ $customer->email }}</td>
                             <td class="p-2 ">{{ $customer->address }}</td>
-                            <td class="p-2 ">{{ $customer->amount }}</td>
                             <td class="p-2 ">{{ $customer->status }}</td>
                             <td class="p-2 ">
                                 <a href="{{ route('customer.edit', ['customer' => $customer->id]) }}" class="bg-blue-500 text-white py-2 px-4 rounded">Edit</a>

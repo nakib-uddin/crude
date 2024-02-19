@@ -7,6 +7,7 @@ use App\Http\Middleware\DisableAuthCaching;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\HishabController;
 
 
 /*
@@ -82,6 +83,15 @@ Route::resource('customers', CustomerController::class)->only(['index', 'create'
     'store' => 'customer.store',
     'edit' => 'customer.edit',
     'update' => 'customer.update',
+]);
+
+Route::resource('hishab', HishabController::class)->names([
+    'index' => 'hishab.index',
+    'create' => 'hishab.create',
+    'store' => 'hishab.store',
+    'edit' => 'hishab.edit',
+    'update' => 'hishab.update',
+    'destroy' => 'hishab.destroy',
 ]);
     
 });

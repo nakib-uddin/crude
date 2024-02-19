@@ -22,7 +22,7 @@
         <div class="mb-4">
             <form method="get" action="{{ route('supplier.create') }}" class="mb-4">
                 <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded">Create Supplier</button>
-                <button><a href="{{ route('dashboard') }}" class="bg-blue-500 text-white py-2 px-4 rounded">Dashboard </a></button>
+               
             </form>
         </div>
 

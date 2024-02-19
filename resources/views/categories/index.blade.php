@@ -21,7 +21,7 @@
 
         <div class="mb-4">
             <a href="{{ route('categories.create') }}" class="bg-blue-500 text-white py-2 px-4 rounded">Create Category</a>
-            <a href="{{ route('dashboard') }}" class="bg-blue-500 text-white py-2 px-4 rounded">Dashboard</a>
+            
         </div>
 
         <div>

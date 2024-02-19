@@ -32,8 +32,8 @@
             <div class="mb-4">
                 <label for="type" class="block text-sm font-medium text-gray-600">Type</label>
                 <select name="type" id="type" class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300">
-                    <option value="option1">Income</option>
-                    <option value="option2">Expense</option>
+                    <option value="Income">Income</option>
+                    <option value="Expense">Expense</option>
                    
                 </select>
             </div>
