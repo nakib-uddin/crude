@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
 <body class="bg-gray-100">
-    <div class="container mx-auto p-8">
-        <h1 class="text-3xl font-semibold mb-8">Create a Product</h1>
+    <div class="container mx-auto">
+        <h1 class="text-3xl font-semibold mb-8 flex justify-center items-center">Create a Product</h1>
         <div>
             @if($errors->any())
                 <ul class="text-red-500">
@@ -44,11 +44,7 @@
                 <input type="text" name="description" id="description" placeholder="Description"
                        class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300">
             </div>
-            <div class="mb-4">
-                <label for="role" class="block text-sm font-medium text-gray-600">Role</label>
-                <input type="text" name="role" id="role" placeholder="Role"
-                       class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300">
-            </div>
+            
             <div>
                 <button type="submit"
                         class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">

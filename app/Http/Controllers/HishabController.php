@@ -28,7 +28,7 @@ class HishabController extends Controller
     public function create()
     {
         if (Auth::check()) {
-            $datas = Category::pluck( 'name','type', 'id');
+            $datas = Category::pluck( 'name','type','id');
             return view('hishabs.create', compact('datas'));
         }
         
@@ -40,18 +40,31 @@ class HishabController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        $data = $request->validate([
-            'category' => 'required',
-            'amount' => 'required',
-            'type' => 'required',
+{
+    // Fetch the category using its name (case-insensitive)
+    $category = Category::where('name', $request['category'])->first();
 
-        ]);
-
-        $newHishab = Hishab::create($data);
-        return redirect(route('hishab.index'))->with('success', 'Hishab created successfully');
-    
+    // Ensure the category exists
+    if (!$category) {
+        return redirect()->back()->withInput()->withErrors(['category' => 'Invalid category']);
     }
+
+    // Validate form data
+    $data = $request->validate([
+        'category' => 'required',
+        'amount' => 'required',
+        // Uncomment this line if 'category_type' is required
+    ]);
+
+    // Add category type to the validation data
+    $data['type'] = $category->type;
+
+    // Create a new 'hisab' record
+    $newHisab = Hishab::create($data);
+
+    return redirect(route('hishab.index'))->with('success', 'Hisab created successfully');
+}
+
 
     /**
      * Display the specified resource.

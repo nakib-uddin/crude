@@ -13,20 +13,21 @@
 <body class="font-sans bg-gray-100">
 
     <div class="container mx-auto p-4">
-        <h1 class="text-3xl font-bold mb-4">Supplier List</h1>
+        <h1 class="text-3xl font-bold mb-4  flex justify-center items-center">Supplier List</h1>
 
         @if(session()->has('success'))
         <div class="bg-green-200 p-2 mb-4">{{ session('success') }}</div>
         @endif
 
-        <div class="mb-4">
+        <div class="mb-4  flex justify-center items-center ">
             <form method="get" action="{{ route('supplier.create') }}" class="mb-4">
                 <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded">Create Supplier</button>
                
             </form>
         </div>
 
-        <table class="table-auto border-collapse border border-gray-300">
+        <div>
+            <table class="table-auto border-collapse border border-gray-300 ">
             <thead>
                 <tr class="bg-gray-200">
                     <th class="p-2">ID</th>
@@ -73,6 +74,7 @@
                 @endforeach
             </tbody>
         </table>
+        </div>
     </div>
 </body>
 </html>

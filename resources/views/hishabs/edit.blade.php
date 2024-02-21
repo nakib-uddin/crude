@@ -35,8 +35,10 @@
                 <label class="mb-1">Category</label>
                 <select name="category" class="py-2 px-3 border rounded">
                     <!-- Populate with your category options -->
-                    <option value="category1" {{ $hishab->category === 'category1' ? 'selected' : '' }}>Category 1</option>
-                    <option value="category2" {{ $hishab->category === 'category2' ? 'selected' : '' }}>Category 2</option>
+                  
+                 <option value="{{ $hishab->category }}">{{  $hishab->category }}</option>
+        
+                    
                 </select>
             </div>
             <div class="flex flex-col">

@@ -14,6 +14,6 @@ class Product extends Model
         'qty',
         'price',
         'description',
-        'role', // Add the 'role' field to the fillable array
+         // Add the 'role' field to the fillable array
     ];
 }

@@ -45,7 +45,7 @@ class ProductController extends Controller
             'qty' => 'required|numeric',
             'price' => 'required|decimal:0,2',
             'description' => 'nullable',
-            'role' => 'required', // Add validation for the 'role' field
+           // Add validation for the 'role' field
         ]);
 
         $newProduct = Product::create($data);
@@ -82,7 +82,7 @@ class ProductController extends Controller
             'qty' => 'required|numeric',
             'price' => 'required|decimal:0,2',
             'description' => 'nullable',
-            'role' => 'required', // Add validation for the 'role' field
+            // Add validation for the 'role' field
         ]);
 
         $product->update($data);

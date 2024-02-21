@@ -20,7 +20,7 @@
                 </ul>
             @endif
         </div>
-        <form action="{{ route('hishab.store') }}" method="post" class="max-w-md mx-auto">
+        <fo rm action="{{ route('hishab.store') }}" method="post" class="max-w-md mx-auto">
             @csrf
             @method('post')
 
@@ -35,15 +35,7 @@
 </div>
 
             
-         <div class="mb-4">
-    <label for="type" class="block text-sm font-medium text-gray-600">Type</label>
-    <select name="type" id="type" class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300">
-        <option value="">Select a type</option>
-        @foreach($datas as $type)
-            <option value="{{ $type }}">{{ $type }}</option>
-        @endforeach
-    </select>
-</div>
+     
 
 
             <div class="mb-4">
@@ -58,7 +50,7 @@
                     Save
                 </button>
             </div>
-        </form>
+        </fo>
     </div>
 </body>
 </html>

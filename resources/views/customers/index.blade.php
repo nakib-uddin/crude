@@ -13,18 +13,18 @@
 <body class="font-sans bg-gray-100">
 
     <div class="container mx-auto p-4">
-        <h1 class="text-3xl font-bold mb-4">Customer List</h1>
+        <h1 class="text-3xl font-bold mb-4 flex justify-center items-center">Customer List</h1>
 
         @if(session()->has('success'))
             <div class="bg-green-200 p-2 mb-4">{{ session('success') }}</div>
         @endif
 
-        <div class="mb-4">
+        <div class="mb-4 flex justify-center items-center">
             <a href="{{ route('customer.create') }}" class="bg-blue-500 text-white py-2 px-4 rounded">Create Customer</a>
             
         </div>
 
-        <div>
+        <div class="flex justify-center items-center">
             <table class="table-auto  border-collapse border border-gray-300">
                 <thead>
                     <tr class="border-b bg-gray-200">

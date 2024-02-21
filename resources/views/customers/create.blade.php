@@ -6,11 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create a Customer</title>
+    @vite('resources/css/app.css')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
 <body class="bg-gray-100">
-    <div class="container mx-auto p-8">
-        <h1 class="text-3xl font-semibold mb-8">Create a Customer</h1>
+    <div class="container mx-auto">
+        <h1 class="text-3xl font-semibold mb-8 flex justify-center items-center">Create a Customer</h1>
         <div>
             @if($errors->any())
                 <ul class="text-red-500">
@@ -27,7 +28,7 @@
             <div class="mb-4">
                 <label for="name" class="block text-sm font-medium text-gray-600">Name</label>
                 <input type="text" name="name" id="name" placeholder="Name"
-                       class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300">
+                class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300">
             </div>
             <div class="mb-4">
                 <label for="phone" class="block text-sm font-medium text-gray-600">Phone</label>

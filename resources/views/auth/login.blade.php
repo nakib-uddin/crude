@@ -1,5 +1,4 @@
 @extends('auth.layouts')
-
 @section('content')
 @vite('resources/css/app.css')
 <main class="login-form">

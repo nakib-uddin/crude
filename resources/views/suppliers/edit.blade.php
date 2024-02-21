@@ -12,7 +12,7 @@
 </head>
 <body class="font-sans bg-gray-100 p-4">
 
-    <h1 class="text-3xl font-bold mb-4">Edit a Supplier</h1>
+    <h1 class="text-3xl font-bold flex justify-center items-center">Edit a Supplier</h1>
 
     <div>
         @if($errors->any())
